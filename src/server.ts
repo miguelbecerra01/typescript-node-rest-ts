@@ -25,7 +25,8 @@ class Server {
         mongoose.set('useFindAndModify', true);
         mongoose.connect(MONGO_URI, {
             useNewUrlParser: true,
-            useCreateIndex: true
+            useCreateIndex: true,
+            useFindAndModify: false
         }).then(db => {
             console.log('MongoDB is connected');
         });
